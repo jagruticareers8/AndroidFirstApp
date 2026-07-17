@@ -1,8 +1,10 @@
 package com.jagruti.myfirstapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         val etName = findViewById<EditText>(R.id.etName)
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val etUserName = findViewById<EditText>(R.id.etUserName)
+        val tvSignIn = findViewById<TextView>(R.id.tvSignIn)
 
         btnSend.setOnClickListener {
             val name = etName.text.toString()
@@ -49,5 +52,11 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+        tvSignIn.setOnClickListener {
+            val intentSignIn = Intent(this, SignInActivity::class.java)
+            startActivity(intentSignIn)
+        }
+
+
     }
 }
