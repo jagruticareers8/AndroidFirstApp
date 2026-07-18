@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "474265734854",
+    "project_id": "androidfirstapp-4daa6",
+    "storage_bucket": "androidfirstapp-4daa6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474265734854:android:212ce1bf113f1f049451c7",
+        "android_client_info": {
+          "package_name": "com.jagruti.myfirstapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_nQf1CBGTvvwn6inuKvJVYXqnhLhnM10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
