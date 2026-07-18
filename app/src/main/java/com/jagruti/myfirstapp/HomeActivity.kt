@@ -6,12 +6,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.jagruti.myfirstapp.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
+    lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -21,8 +24,7 @@ class HomeActivity : AppCompatActivity() {
         val  email = intent.getStringExtra(SignInActivity.KEY_EMAIL)
         val  uid = intent.getStringExtra(SignInActivity.KEY_UID)
 
-        val welcomeText = findViewById<TextView>(R.id.tv_welcome)
-        welcomeText.text = "Welcome $name \n $email \n $uid"
+        binding.tvWelcome.text = "Welcome $name \n $email \n $uid"
 
     }
 }
