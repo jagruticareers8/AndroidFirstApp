@@ -33,11 +33,15 @@
         <activity
             android:name=".DialogTypes"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".DynamicPhotoFrame"
+            android:exported="false"
             android:windowSoftInputMode="adjustResize">
 
         </activity>
         <activity
-            android:name=".DynamicPhotoFrame"
+            android:name=".ListViewScreen"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter>
