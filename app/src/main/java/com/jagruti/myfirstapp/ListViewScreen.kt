@@ -1,5 +1,6 @@
 package com.jagruti.myfirstapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -48,6 +49,9 @@ class ListViewScreen : AppCompatActivity() {
         binding.lvContact.setOnItemClickListener { parent, view, position, id ->
             val contact = contactArrayList[position]
             Toast.makeText(this, "Clicked: ${contact.name}", Toast.LENGTH_SHORT).show()
+            val i = Intent(this, ContactDetailsActivity::class.java)
+            i.putExtra("CONTACT_DATA", contact)
+            startActivity(i)
         }
 
         val taskList = arrayListOf<String>()
