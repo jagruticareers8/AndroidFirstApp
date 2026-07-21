@@ -33,15 +33,23 @@
         <activity
             android:name=".DialogTypes"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".DynamicPhotoFrame"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ListViewScreen"
             android:exported="false"
             android:windowSoftInputMode="adjustResize">
 
         </activity>
         <activity
-            android:name=".ListViewScreen"
+            android:name=".ContactDetailsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RecyclerViewActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter>
